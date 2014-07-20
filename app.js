@@ -52,7 +52,7 @@ app.get('/admin', function(req, res) {
 
 app.get('/cal', function(req, res) {
   cal.clear()
-  cal.setDomain('webuild.sg').setName('We Build SG Events');
+  cal.setDomain('webuild.sg').setName('We Build SG Events').setTimezone('Asia/Singapore');
 
   events.feed.filter(function(thisEvent){
     if (!(thisEvent.start_time && thisEvent.end_time && thisEvent.name && thisEvent.description)){
